@@ -36,7 +36,7 @@
             sortBox = new ComboBox();
             sortLabel = new Label();
             stockLabel = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            stockPanel = new TableLayoutPanel();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
@@ -50,6 +50,7 @@
             label1 = new Label();
             label7 = new Label();
             panel1 = new Panel();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
@@ -57,8 +58,9 @@
             splitContainer2.Panel1.SuspendLayout();
             splitContainer2.Panel2.SuspendLayout();
             splitContainer2.SuspendLayout();
-            tableLayoutPanel1.SuspendLayout();
+            stockPanel.SuspendLayout();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // splitContainer1
@@ -113,22 +115,22 @@
             resources.ApplyResources(stockLabel, "stockLabel");
             stockLabel.Name = "stockLabel";
             // 
-            // tableLayoutPanel1
+            // stockPanel
             // 
-            resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
-            tableLayoutPanel1.Controls.Add(label12, 5, 1);
-            tableLayoutPanel1.Controls.Add(label11, 4, 1);
-            tableLayoutPanel1.Controls.Add(label10, 3, 1);
-            tableLayoutPanel1.Controls.Add(label9, 2, 1);
-            tableLayoutPanel1.Controls.Add(label8, 1, 1);
-            tableLayoutPanel1.Controls.Add(label6, 5, 0);
-            tableLayoutPanel1.Controls.Add(label5, 4, 0);
-            tableLayoutPanel1.Controls.Add(label4, 3, 0);
-            tableLayoutPanel1.Controls.Add(label3, 2, 0);
-            tableLayoutPanel1.Controls.Add(label2, 1, 0);
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(label7, 0, 1);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            resources.ApplyResources(stockPanel, "stockPanel");
+            stockPanel.Controls.Add(label12, 5, 1);
+            stockPanel.Controls.Add(label11, 4, 1);
+            stockPanel.Controls.Add(label10, 3, 1);
+            stockPanel.Controls.Add(label9, 2, 1);
+            stockPanel.Controls.Add(label8, 1, 1);
+            stockPanel.Controls.Add(label6, 5, 0);
+            stockPanel.Controls.Add(label5, 4, 0);
+            stockPanel.Controls.Add(label4, 3, 0);
+            stockPanel.Controls.Add(label3, 2, 0);
+            stockPanel.Controls.Add(label2, 1, 0);
+            stockPanel.Controls.Add(label1, 0, 0);
+            stockPanel.Controls.Add(label7, 0, 1);
+            stockPanel.Name = "stockPanel";
             // 
             // label12
             // 
@@ -192,9 +194,15 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(tableLayoutPanel1);
+            panel1.Controls.Add(panel2);
             resources.ApplyResources(panel1, "panel1");
             panel1.Name = "panel1";
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Controls.Add(stockPanel);
+            panel2.Name = "panel2";
             // 
             // HomeScreen
             // 
@@ -213,15 +221,17 @@
             splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
             splitContainer2.ResumeLayout(false);
-            tableLayoutPanel1.ResumeLayout(false);
+            stockPanel.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label stockLabel;
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel stockPanel;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -241,5 +251,6 @@
         private SplitContainer splitContainer1;
         private Panel panel1;
         private SplitContainer splitContainer2;
+        private Panel panel2;
     }
 }
